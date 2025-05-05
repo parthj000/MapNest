@@ -29,7 +29,7 @@ export default function ClientLayout({
           <DashBoardTopBar session={session} />
           <div className="h-[calc(100vh-50px)] grid grid-cols-12  gap-1 bg-[var(--nav-bg)] relative">
           <div
-  className={`absolute top-0 left-0 z-20  max-w-50 md:max-w-[100vh] h-[calc(100vh-50px)] p-2 pb-7 pt-4 shadow-2xl
+  className={`absolute top-0 left-0 z-20  max-w-50 md:max-w-[100vh] h-[calc(100vh-50px)]  pb-7 pt-4 shadow-2xl
     transition-all duration-700 ease-in-out transform
     md:static md:shadow-none md:col-span-2
     ${toggle
