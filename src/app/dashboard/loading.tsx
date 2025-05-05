@@ -1,20 +1,10 @@
-
-
-// export default function Loading() {
-//   return (
-//     <div className="pos-center">
-//       <div className="loader"></div>
-//     </div>
-//   );
-// }
-
 'use client';
 
 import rawAnimationData from '@/components/loading.json';
 import { useLottie } from 'lottie-react';
 
 export default function Loading() {
-  // Clone the animation data to make it mutable
+ 
   const animationData = JSON.parse(JSON.stringify(rawAnimationData));
 
   const options = {
