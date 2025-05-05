@@ -8,6 +8,7 @@ import { DashboardContext } from "@/hooks/dashboardContext";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import Loading from "./loading";
+import TypingHero from "@/components/TypingHero";
 
 export default function page() {
   const [prompt, setPrompt] = useState("");
@@ -21,6 +22,8 @@ export default function page() {
       <div className="flex-col flex-1">
         <>
           {!loading ? (
+            <>
+            <TypingHero />
             <InputBox
               prompt={prompt}
               setPrompt={setPrompt}
@@ -39,6 +42,7 @@ export default function page() {
                 router.push(`/dashboard/m/${data._id}`);
               }}
             />
+            </>
           ) : (
             <div className="flex flex-1 justify-center items-center">
               <Loading />
