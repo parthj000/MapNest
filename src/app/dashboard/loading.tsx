@@ -1,28 +1,8 @@
-'use client';
+import LoadingComponent from '@/components/LoadingComponent'
+import React from 'react'
 
-import rawAnimationData from '@/components/loading.json';
-import { useLottie } from 'lottie-react';
-
-export default function Loading() {
- 
-  const animationData = JSON.parse(JSON.stringify(rawAnimationData));
-
-  const options = {
-    animationData,
-    loop: true,
-    autoplay: true,
-  };
-
-  const { View } = useLottie(options);
-
+export default function loading() {
   return (
-    <>
-    <div className=" flex flex-row items-center justify-center w-75 h-75">
-      {View}
-       
-    </div>
-   
-    </>
-  );
+    <LoadingComponent />
+  )
 }
-
