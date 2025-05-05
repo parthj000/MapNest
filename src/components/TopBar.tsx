@@ -26,7 +26,10 @@ export const DashBoardTopBar = ({ session }: { session: any }) => {
   return (
     <div className="w-full flex bg-[var(--nav-bg)] h-[50px] items-center justify-between px-4">
       <div className="flex flex-row-reverse justify-around items-center gap-2">
-        <span className="font-bold text-3xl">MapNest</span>
+<span className="text-3xl md:text-3xl font-extrabold tracking-tight text-neutral-800">
+  Map<span className=" text-[var(--button-bg)]">Nest</span>
+</span>
+
         <div
           className="border-3 p-1 md:hidden border-grey rounded-lg hover:bg-black hover:cursor"
           onClick={() => setToggle((prev: boolean) => !prev)}
