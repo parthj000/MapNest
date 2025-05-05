@@ -1,28 +1,26 @@
 'use client';
 
-import rawAnimationData from '@/components/loading.json';
+import { useEffect, useState } from 'react';
 import { useLottie } from 'lottie-react';
 
 export default function LoadingComponent() {
- 
-  const animationData = JSON.parse(JSON.stringify(rawAnimationData));
+  const [animationData, setAnimationData] = useState(null);
 
-  const options = {
+  useEffect(() => {
+    fetch('/lottie/loading.json') // ensure the file is in public/lottie
+      .then(res => res.json())
+      .then(setAnimationData);
+  }, []);
+
+  const { View } = useLottie({
     animationData,
     loop: true,
     autoplay: true,
-  };
-
-  const { View } = useLottie(options);
+  });
 
   return (
-    <>
-    <div className=" flex flex-row items-center justify-center w-75 h-75">
-      {View}
-       
+    <div className="flex items-center justify-center w-75 h-75">
+      {animationData ? View : <span>Loading...</span>}
     </div>
-   
-    </>
   );
 }
-
