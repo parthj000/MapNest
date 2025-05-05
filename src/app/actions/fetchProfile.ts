@@ -1,6 +1,6 @@
 import { clientPromise } from "@/lib/dbConnect";
+import UserModel from "@/models/User";
 import { getServerSession } from "next-auth";
-import UserModel from "../../../models/User";
 import { redirect } from "next/navigation";
 
 

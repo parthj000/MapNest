@@ -5,7 +5,7 @@ import { fetchOneMap } from '@/app/actions/fetchOneMap';
 import Flow from '@/app/dashboard/mydiagram';
 
 
-export default async function Page({ params }: { params: { mapid: string } }) {
+export default async function Page({ params }: { params:any }) {
     console.log(params);
   const data:any = await fetchOneMap(params.mapid);
   

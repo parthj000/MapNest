@@ -1,11 +1,13 @@
 "use server"
 
 import { getServerSession } from "next-auth";
-import { authOptions } from "../api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
-import { MapModel } from "../../../models/Map";
 import { clientPromise } from "@/lib/dbConnect";
-import UserModel from "../../../models/User";
+import UserModel from "@/models/User";
+import MapModel from "@/models/Map";
+
+
+
 
 
 
@@ -13,7 +15,7 @@ export const makeMaps = async (prompt: string) => {
 
     
 
-  const session:any = await getServerSession(authOptions);
+  const session:any = await getServerSession();
   console.log(session);
   if(!session){
     redirect("/signup");

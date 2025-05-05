@@ -2,7 +2,6 @@
 
 import React from "react";
 import ClientLayout from "./ClientLayout";
-import { getServerSession } from "next-auth";
 import { fetchAllMaps } from "../actions/fetchAllMaps";
 import { redirect } from "next/navigation";
 import { fetchProfile } from "../actions/fetchProfile";

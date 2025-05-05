@@ -18,7 +18,7 @@ export const SideBar = () => {
     
       <div className="flex flex-col bg-[var(--new-bg)] rounded-md inset-shadow-sm relative h-full px-4 py-7">
         
-        <h1 className="text-lg font-bold p-2 mb-4 border border-dashed rounded-sm text-center hover:cursor-pointer hover:bg-[var(--button-bg)] hover:shadow-sm border-2 border-black-900 hover:text-white" onClick={()=>{
+        <h1 className="text-lg font-bold p-2 mb-4 border-dashed rounded-sm text-center hover:cursor-pointer hover:bg-[var(--button-bg)] hover:shadow-sm border-2 border-black-900 hover:text-white" onClick={()=>{
           setOtherButton(true);
           router.push("/dashboard")}}> New +</h1>
         

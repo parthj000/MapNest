@@ -1,15 +1,12 @@
 'use server'
-
-import { getServerSession } from "next-auth"
-import { redirect } from "next/navigation";
-import { MapModel } from "../../../models/Map";
 import { clientPromise } from "@/lib/dbConnect";
-import toast from "react-hot-toast";
+import MapModel from "@/models/Map";
 
 
 
 
-export const fetchOneMap = async(mapid:string)=>{
+
+export const fetchOneMap = async(mapid:any)=>{
     
     try {
        

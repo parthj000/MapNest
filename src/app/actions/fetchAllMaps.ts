@@ -2,8 +2,8 @@
 
 import { getServerSession } from "next-auth"
 import { redirect } from "next/navigation";
-import { MapModel } from "../../../models/Map";
 import { clientPromise } from "@/lib/dbConnect";
+import MapModel from "@/models/Map";
 
 
 
