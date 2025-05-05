@@ -31,10 +31,10 @@ export const DashBoardTopBar = ({ session }: { session: any }) => {
 </span>
 
         <div
-          className="border-3 p-1 md:hidden border-grey rounded-lg hover:bg-black hover:cursor"
+          className={toggle?"border-3 p-1 md:hidden border-grey rounded-lg hover:bg-[var(--button-bg)] hover:cursor bg-[var(--button-bg)]":"border-3 p-1 md:hidden border-grey rounded-lg hover:bg-black hover:cursor "}
           onClick={() => setToggle((prev: boolean) => !prev)}
         >
-          <ArrowRightToLine color="grey" />
+          <ArrowRightToLine color={toggle?"white":"grey"} />
         </div>
       </div>
 

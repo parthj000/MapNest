@@ -3,20 +3,24 @@
 import { signIn } from 'next-auth/react';
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
+import Loading from '../dashboard/loading';
 
 export default function SignUp() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 h-screen w-screen">
       {/* Left Branding Panel */}
-      <div className="hidden sm:flex flex-col justify-center items-center bg-gradient-to-br from-[#f3f3f3]  to-[#b7b8c4] p-10 text-white">
-        <h1 className="text-4xl font-bold text-[#433b3b] mb-4">Welcome to MapNest</h1>
-        <p className="text-lg max-w-md text-center font-semibold">
+      <div className="hidden sm:flex flex-col justify-center items-center bg-gradient-to-br from-[white]  to-[var(--button-bg)] p-10 text-white">
+        <Loading />
+        <h1 className="md:text-4xl font-extrabold text-[#433b3b] text-center text-3xl mb-4">Welcome to MapNest</h1>
+        
+        <p className="md:text-lg  text-md max-w-md text-center font-bold ">
           Visualize your thoughts. Collaborate. Share knowledge through intuitive mind maps.
         </p>
+        
       </div>
 
       {/* Right Auth Panel */}
-      <div className="flex justify-center items-center bg-[#fdf4f5] p-6">
+      <div className="flex justify-center items-center bg-[var(--nav-bg)] p-6 ">
         <LoginForm />
       </div>
     </div>

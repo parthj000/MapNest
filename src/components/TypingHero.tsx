@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const phrases = [
-  "Make a map for recipes",
+  "Make a map for learning backend",
   "Make a map for your startup idea",
   "Make a map for exam prep",
   "Make a map for your dream trip",
@@ -36,11 +36,17 @@ export default function TypingHero() {
     return () => clearTimeout(timeout);
   }, [charIndex, deleting, phraseIndex]);
 
+  const highlight = "Make a map for";
+  const coloredText = text.startsWith(highlight)
+    ? [highlight, text.slice(highlight.length)]
+    : [text,""];
+
   return (
     <div className="flex-1 justify-center items-center mb-17 hidden sm:flex">
-      <h1 className="font-extrabold text-4xl md:text-5xl text-[var(--button-bg)]">
-        {text}
-        <span className="border-r-2 border-[var(--button-bg)] animate-pulse ml-1" />
+      <h1 className="font-extrabold text-4xl md:text-5xl">
+        <span className="text-black">{coloredText[0]}</span>
+        <span className="text-[var(--button-bg)]">{coloredText[1]}</span>
+        <span className="border-r-4 border-[var(--button-bg)] animate-pulse ml-1" />
       </h1>
     </div>
   );

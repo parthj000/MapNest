@@ -3,21 +3,21 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FaGithub } from "react-icons/fa";
-import TypingHero from "@/components/TypingHero";
 
-export default function HomePage() {
+
+export default async function HomePage() {
   return (
     <main className="min-h-screen bg-white text-gray-900 flex flex-col items-center px-6 py-6">
       {/* Top Navigation */}
       <nav className="w-full max-w-6xl flex justify-between items-center py-2 mb-12">
-        <h1 className="text-2xl font-bold">MapNest</h1>
+        <h1 className="text-2xl font-bold">Map<span className="text-[var(--button-bg)]">Nest</span></h1>
         <div className="flex items-center gap-4">
           <Link href="https://github.com/parthj000" target="_blank">
             <FaGithub size={24} className="text-[var(--button-bg)] hover:opacity-70" />
           </Link>
-          <Link href="/signup">
+          <Link href="/dashboard">
             <Button variant="ghost" className="text-[var(--button-bg)] hover:bg-gray-100">
-              Login
+              Signup
             </Button>
           </Link>
         </div>
@@ -34,8 +34,8 @@ export default function HomePage() {
         </p>
 
         <div className="flex justify-center gap-4">
-          <Link href="/signup">
-            <Button className="bg-[var(--button-bg)] text-white hover:opacity-90">
+          <Link href="/dashboard">
+            <Button className="bg-[var(--button-bg)] text-white hover:bg-gray-100 hover:text-black">
               Get Started <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
