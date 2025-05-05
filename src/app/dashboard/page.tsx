@@ -7,8 +7,8 @@ import { makeMaps } from "@/app/actions/makeMaps";
 import { DashboardContext } from "@/hooks/dashboardContext";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
-import Loading from "./loading";
 import TypingHero from "@/components/TypingHero";
+import LoadingComponent from "@/components/LoadingComponent";
 
 export default function page() {
   const [prompt, setPrompt] = useState("");
@@ -45,7 +45,7 @@ export default function page() {
             </>
           ) : (
             <div className="flex flex-1 justify-center items-center">
-              <Loading />
+              <LoadingComponent />
             </div>
           )}
         </>

@@ -1,8 +1,8 @@
 import React from 'react'
-import Loading from '../../loading'
+import LoadingComponent from '@/components/LoadingComponent'
 
 export default function loading() {
   return (
-    <Loading />
+    <LoadingComponent />
   )
 }

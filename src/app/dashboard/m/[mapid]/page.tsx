@@ -2,7 +2,7 @@
 import { DashboardContext } from '@/hooks/dashboardContext';
 import { useContext, useEffect } from 'react';
 import Flow from '../../mydiagram';
-import Loading from '../../loading';
+import LoadingComponent from '@/components/LoadingComponent';
 
 export default function Page() {
   
@@ -22,7 +22,7 @@ export default function Page() {
 
   return (
     <>
-    {globalLoading?<Loading />:<Flow data={mapData.mapJson} />}
+    {globalLoading?<LoadingComponent />:<Flow data={mapData.mapJson} />}
     
       
     </>
