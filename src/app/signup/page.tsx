@@ -3,13 +3,20 @@
 import { signIn } from 'next-auth/react';
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
-import LoadingComponent from '@/components/LoadingComponent';
+
+import dynamic from 'next/dynamic';
+
+
+const DynamicLottie = dynamic(()=>import("@/components/LoadingComponent"));
 
 export default function SignUp() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 h-screen w-screen">
+
+      
       {/* Left Branding Panel */}
       <div className="hidden sm:flex flex-col justify-center items-center bg-gradient-to-br from-[white]  to-[var(--button-bg)] p-10 text-white">
+        <DynamicLottie />
         
         <h1 className="md:text-4xl font-extrabold text-[#433b3b] text-center text-3xl mb-4">Welcome to MapNest</h1>
         
