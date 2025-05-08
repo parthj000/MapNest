@@ -7,7 +7,9 @@ import { FaGithub } from 'react-icons/fa';
 import dynamic from 'next/dynamic';
 
 
-const DynamicLottie = dynamic(()=>import("@/components/LoadingComponent"));
+const DynamicLottie = dynamic(()=>import("@/components/LoadingComponent"),{
+  ssr:false
+});
 
 export default function SignUp() {
   return (
